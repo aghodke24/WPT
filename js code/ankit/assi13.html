@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2> Employee Table</h2>
+
+<table>
+  <tr>
+    <th>Emp id</th>
+    <th>Emp Name</th>
+    <th>Salary</th>
+  </tr>
+  <tbody id="employeeTable">
+  </tbody>
+</table>
+
+<script>
+var employees = [
+  { empid: "1", empname: "abc", salary: "$100,000" },
+  { empid: "2", empname: "efg", salary: "$120,000" },
+  { empid: "3", empname: "hij", salary: "$80,000" },
+  { empid: "4", empname: "klm", salary: "$90,000" }
+];
+
+employees.forEach(function(employee) {
+  var row = document.createElement("tr");
+  var idCell = document.createElement("td");
+  var nameCell = document.createElement("td");
+  var salaryCell = document.createElement("td");
+
+  idCell.textContent = employee.empid;
+  nameCell.textContent = employee.empname;
+  salaryCell.textContent = employee.salary;
+
+  row.appendChild(idCell);
+  row.appendChild(nameCell);
+  row.appendChild(salaryCell);
+
+  document.getElementById("employeeTable").appendChild(row);
+});
+</script>
+
+</body>
+</html>

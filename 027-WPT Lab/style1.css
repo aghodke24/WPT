@@ -1,0 +1,13 @@
+body {
+    background-color: royalblue;
+  }
+  legend {
+    color: yellowgreen;
+    padding: 5px 10px;
+  }
+  label{
+    color:aliceblue;
+  }
+  datalist {
+    display: list-item;
+  }

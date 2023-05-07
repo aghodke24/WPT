@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        table,th,td {
+            border: 3px;
+            border-radius: 5px;
+        }
+        fieldset{
+            border-radius: 10px;
+            border-color: blue;
+        }
+
+        #reg{
+            background-color:blue;
+            color: whitesmoke;
+            border-radius: 10px;
+        }
+
+    </style>
+    
+</head>
+<body bgcolor="black">
+    <fieldset>
+        <legend> <table><tr align="left" bgcolor="blue"><td> <font color="white">Name And Address</font></td></tr></table></legend>
+        <table cellpadding="10px">
+            <tr>
+                <td align="right"> <font color="white"> SSN: <input type="text"> </font> </td>
+            </tr>
+            <tr>
+                <td align="right"> <font color="white"> Full Name: <input type="text"></font> </td>
+                <td align="left" bgcolor="blue"> <font color="white">Fill in name and Address</font> </td>
+            </tr>
+            <tr>
+                <td align="right"> <font color="white">Street and Number: <input type="text"> </font> </td>
+            </tr>
+            <tr>
+                <td align="right"> <font color="white"> Postal Code: <input type="text"></font></td>
+            </tr>
+            <tr>
+                <td align="right"> <font color="white"> City: <input type="text"></font></td>
+            </tr>
+        </table>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <legend><table><tr align="left" bgcolor="blue"><td><font color="white"> Username & Password</font></td></tr></table></legend>
+        <table cellpadding="10px">
+            <tr>
+                <td align="right" > <font color="white"> &ensp; &nbsp;  Username: </font></td>
+                <td align="left"> <font color="white"> &ensp; &nbsp; <input type="text"></font> </td>
+                
+            </tr>
+            
+            <tr>
+                <td align="right" > <font color="white"> &ensp;  &nbsp; Password: </font></td>
+                <td align="left"> <font color="white"> &ensp; &nbsp; <input type="text"></font> </td>
+            </tr>
+            
+            <tr>
+                <td> &nbsp; &ensp;;</td>
+                <td> <font color="white"> &nbsp; &nbsp; <input type="checkbox"> &nbsp; Show Password</font></td>
+            </tr>
+             
+        </table>
+    </fieldset>
+    <br>
+        <div id="divv" style="margin-left: 10%;"> <input type="submit" value="Register" id="reg" > </div>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+</head>
+<body>
+    <h1>Group Members: [Insert Names Here]</h1>
+    <p>This form is intended to gather feedback from users on problems or difficulties they have faced while purchasing items on our sports website. Please fill out the form below and click submit.</p>
+    <form action="mailto:[Insert Email Here]" method="post" enctype="text/plain">
+        <label for="problem">Type of Problem:</label>
+        <select id="problem" name="problem">
+            <option value="technical">Technical (e.g. website is down)</option>
+            <option value="product">Product not available</option>
+            <option value="information">Missing information about the product</option>
+        </select><br><br>
+        <label for="username">Username<span style="color:red">*</span>:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="email">Email<span style="color:red">*</span>:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="location">Location<span style="color:red">*</span>:</label>
+        <input type="text" id="location" name="location" required><br><br>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone"><br><br>
+        <label for="description">Description of the Problem<span style="color:red">*</span>:</label><br>
+        <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
+        <input type="checkbox" id="notification" name="notification">
+        <label for="notification">Notify me when the problem is solved</label><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

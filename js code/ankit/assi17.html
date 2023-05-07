@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Circle Calculator</title>
+  </head>
+  <body>
+    <form>
+      <label for="radius">Enter the radius of the circle:</label>
+      <input type="number" id="radius" name="radius" required><br><br>
+      <button type="button" onclick="calculate()">Calculate</button><br><br>
+      <label for="area">Area:</label>
+      <input type="number" id="area" name="area" readonly><br><br>
+      <label for="circumference">Circumference:</label>
+      <input type="number" id="circumference" name="circumference" readonly><br><br>
+    </form>
+
+    <script>
+      function calculate() {
+        var radius = document.getElementById("radius").value;
+        var area = Math.PI * radius * radius;
+        var circumference = 2 * Math.PI * radius;
+        document.getElementById("area").value = area.toFixed(2);
+        document.getElementById("circumference").value = circumference.toFixed(2);
+      }
+    </script>
+  </body>
+</html>

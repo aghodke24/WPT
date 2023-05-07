@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Example</title>
+    <script>
+        function validateForm() {
+            var name = document.forms["myForm"]["name"].value;
+            var luckyNumber = document.forms["myForm"]["luckyNumber"].value;
+            if (name == "" || !/^[a-zA-Z]*$/.test(name) || name.length > 10) {
+                alert("Name must be filled out with only alphabets and maximum length is 10.");
+                return false;
+            }
+            if (luckyNumber == "" || !/^\d{4}$/.test(luckyNumber)) {
+                alert("Lucky number must be filled out with 4 digits.");
+                return false;
+            }
+            return true;
+        }
+        function showDetails() {
+            if (validateForm()) {
+                var name = document.forms["myForm"]["name"].value;
+                var luckyNumber = document.forms["myForm"]["luckyNumber"].value;
+                var details = { "name": name, "luckyNumber": luckyNumber };
+                var detailsWindow = window.open("", "DetailsWindow", "width=200,height=100");
+                detailsWindow.document.write("Name: " + details.name + "<br>Lucky Number: " + details.luckyNumber);
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="myForm" onsubmit="return validateForm()" method="post">
+        Name: <input type="text" name="name"><br>
+        Lucky Number: <input type="text" name="luckyNumber"><br>
+        <input type="button" value="Submit" onclick="showDetails()">
+    </form>
+</body>
+</html>
