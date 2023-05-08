@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3{
+            background-color: aqua;
+            display: inline-block;
+            width: 400px;
+            text-align: center;
+            padding: 5px;
+        }
+        input{
+            margin-right: 100px;
+        }
+        .maindiv{
+            display: flex;width: 50%;
+            
+        }
+        .childdiv{
+            flex-direction: column;width: 30%;
+        }
+        
+    </style>
+    <script src="day3_9.js"></script>
+</head>
+<body>
+    <h3>**** Calculate Compound Interest ****</h3><br><br>
+    <div class="maindiv">
+        <div class="childdiv" style="font-size: 18px;">
+            <label for="pr">Principle</label><br>
+            <label for="rate">Rate of Interest</label><br>
+            <label for="period">Period</label><br>
+            <label for="comp">Comp Interest</label>
+
+        </div>
+        <div style="width: 10%;font-size: 18px;">
+        <span>-</span><br><span>-</span><br><span>-</span><br><span>-</span>
+        </div>
+        <div class="childdiv">
+            <input type="text" name="" id="pr" style="padding-bottom: 2px;" onchange="return validateData(event)"><br>      
+            <input type="text" name="" id="rate"style="padding-bottom: 2px;" onchange="return validateData(event)"><br>
+            <input type="text" name="" id="period"style="padding-bottom: 2px;" onchange="return validateData(event)"><br>
+            <input type="text" name="" id="comp" readonly>
+        </div>
+        <!-- <div class="childdiv" style="font-size: 18px;">
+            <div id="errPr">fds</div>
+            <div id="errRate">df</div>
+            <div id="errPeriod">dsfs</div>      
+        </div> -->
+    </div>
+    <div>
+        <input type="button" value="Calculate" onclick="compInt()">
+    </div>
+    
+
+   
+</body>
+</html>
